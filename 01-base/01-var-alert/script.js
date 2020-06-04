@@ -10,8 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
-    let whatever = "hello world!!!";
-    alert(whatever);
+	let myVariable = "Hello, World!";
+	alert(myVariable);
     // your code here
 
 })();
