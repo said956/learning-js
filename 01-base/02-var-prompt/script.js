@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    var name = prompt("What's your name?", "Ex. John");
+
+    if (name == "" || name == null)
+    {
+    	alert("You didn't enter your name.");
+    }
+    else
+    {
+    	alert("Hello, " + name + " !");
+    }
+
+
 
 })();
