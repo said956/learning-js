@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function Agt() {
 
-    // your code here
+    var age = prompt("What's your age?", "Ex. 20");
+    var gender = prompt("What's your gender?", "Ex. Male");
+    var town = prompt("In which town do you live?", " Ex. Liège");
 
+    var confirmValue = confirm("Your age: " + age + "\nYour gender: " + gender + "\nYour town: " + town + "\nDo you confirm these data?");
+
+    if(confirmValue)
+    {
+    	alert("You have confirmed. Thank you.");
+    }
+    else
+    {
+    	Agt();
+    }
 })();
