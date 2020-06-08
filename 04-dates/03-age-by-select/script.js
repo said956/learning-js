@@ -11,6 +11,26 @@
 
 (function() {
 
-    // your code here
+	document.getElementById("run").addEventListener("click", function() {
 
+	    var dobDay = document.getElementById("dob-day").value;
+	    var dobMonth = (document.getElementById("dob-month").value) - 1;
+	    var dobYear = document.getElementById("dob-year").value;
+
+	    var date = new Date();
+	    var currentDay = date.getDate();
+	    var currentMonth = date.getMonth();
+	    var currentYear = date.getFullYear();
+
+	    var age = currentYear - dobYear;
+
+	    if ((currentMonth < dobMonth) || ((currentMonth == dobMonth) && (currentDay < dobDay)))
+	    {
+	    	alert("You are currently " + (age - 1) + " years old.");
+	    }
+	    else
+	    {
+	    	alert("You are currently " + age + " years old.");
+	    }
+	});
 })();
