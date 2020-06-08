@@ -10,7 +10,28 @@
 // You will have time to focus on it later.
 
 (function() {
+    document.getElementById("run").addEventListener("click", function() {
+    	var year = document.getElementById("year").value;
 
-    // your code here
+    	function GetSpookyFridays(year)
+    	{
+    		var date = new Date();
+    		var month13 = [];
+    		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  
+    		for(var month = 0; month < 12; month++)
+    		{
+    			date.setFullYear(year, month, 13);
 
+    			if(date.getDay() == 5)
+    			{
+    				month13.push(months[month]);
+    			}
+    		}
+
+    		return month13;
+    	}
+
+    	alert(GetSpookyFridays(year));
+	});
 })();

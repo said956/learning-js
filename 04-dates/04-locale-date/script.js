@@ -10,9 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+    var date = new Date();
+    var currentDay = date.getDay();
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var currentDate = date.getDate();
+    var currentMonth = date.getMonth();
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var currentYear = date.getFullYear();
+    var currentHour = date.getHours();
+    var currentMinute = date.getMinutes();
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-
-    // your code here
-
+    document.getElementById("target").innerHTML = days[currentDay] + " " + currentDate + " " + months[currentMonth] + " " + currentYear + ", " + currentHour + "h" + currentMinute; 
 })();
