@@ -15,8 +15,22 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        var number = Number(document.getElementById("number").value);
 
+        function Factorial(nbr)
+        {
+        	if (nbr <= 0)
+        	{
+        		return 1;
+        	}
+        	else
+        	{
+        		return Factorial(nbr - 1) * nbr;
+        	}
+        }
+
+        var factorial = Factorial(number);
+
+        alert("Factorial of " + number + ": " + factorial);
     });
-
 })();

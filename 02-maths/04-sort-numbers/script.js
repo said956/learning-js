@@ -15,8 +15,14 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+    	var numbersValue = document.getElementById("numbers").value;
+    	var parsedNumbers = numbersValue.split(",");
 
+    	parsedNumbers.sort(function CompareNumbers(a, b)
+    	{
+    		return a - b;
+    	});
+
+    	document.getElementById("numbers").value = parsedNumbers;
     });
-
 })();
