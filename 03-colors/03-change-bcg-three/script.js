@@ -10,7 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
+	document.getElementById("run").addEventListener("click", function() 
+    {
+    	function RandomColor() 
+    	{
+    		var color="#";
+    		var hexLetters = '0123456789ABCDEF';
 
-    // your code here
+    		for(let i = 0; i < 6; i++)
+    		{
+    			color += hexLetters[Math.floor(Math.random() * 16)];
+    		}
 
+    		return color;
+    	}
+
+    	var choiceOfColor = RandomColor();
+    	document.body.style.backgroundColor = choiceOfColor;
+	});
 })();
