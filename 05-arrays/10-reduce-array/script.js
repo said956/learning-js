@@ -89,6 +89,8 @@
         },
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        const ageAmount = people.reduce((a, b) => a + b.age, 0);
+        console.log(ageAmount);
+    })
 })();

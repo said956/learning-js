@@ -29,7 +29,7 @@
 
     	document.getElementById("min").innerHTML = Math.max(...arr);
     	document.getElementById("max").innerHTML = Math.min(...arr);
-    	const average = arr.reduce((a, b) => a + b);
+    	const average = arr.reduce((a, b) => a + b, 0);
     	document.getElementById("sum").innerHTML = average;
     	document.getElementById("average").innerHTML = average / arr.length;
     });
