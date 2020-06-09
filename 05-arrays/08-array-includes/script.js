@@ -26,6 +26,8 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        console.log("Is there an apple in the fruits array? " + fruits.includes("apple"));
+    })
 
 })();

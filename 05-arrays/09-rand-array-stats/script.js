@@ -11,6 +11,28 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+    	function randomGenerator(min, max) {
+    		return Math.floor(Math.random() * (max - min) + min);
+    	}
+
+    	const arr = [];
+
+    	for(let i = 0; i < 10; i++)
+    	{
+    		let randomNumber = randomGenerator(1, 101);
+    		arr.push(randomNumber);
+    		console.log(arr);
+    		document.getElementById(`n-${i + 1}`).innerHTML = arr[i];
+    	}
+
+    	document.getElementById("min").innerHTML = Math.max(...arr);
+    	document.getElementById("max").innerHTML = Math.min(...arr);
+    	const average = arr.reduce((a, b) => a + b);
+    	document.getElementById("sum").innerHTML = average;
+    	document.getElementById("average").innerHTML = average / arr.length;
+    });
 
 })();
+
