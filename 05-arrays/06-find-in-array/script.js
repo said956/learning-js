@@ -89,6 +89,22 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        const email = people.find((element, index, arr) => {
+            if(arr[index]["firstname"] === "Jean" && arr[index]["lastname"] === "Dupont")
+                console.log(arr[index]["email"] + " " + index);
+        });
+    });
 
 })();
+
+// Solution 2
+/*for(let i = 0; i < people.length; i++)
+{
+    if (people[i]["lastname"] === "Dupont" && people[i]["firstname"] === "Jean")
+    {
+        console.log(people[i]["email"]);
+        console.log(i);
+    }
+}*/

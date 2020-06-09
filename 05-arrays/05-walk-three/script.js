@@ -39,6 +39,11 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        people.forEach((item, index, arr) => {
+
+            console.log(arr[index]["firstname"] + " " + arr[index]["lastname"]);
+        })
+    })
 
 })();
