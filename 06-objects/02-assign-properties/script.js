@@ -26,43 +26,45 @@
         os: "linux",
         user: null,
     };
+
     document.getElementById("run").addEventListener("click", () => {
+        //computers.forEach(() => {
 
+        for (let i = 0; i < computers.length; i++)
+        {
+            if (! computers[i].hasOwnProperty("available"))
+            {
+                Object.defineProperty(computers[i], "available", {
+                        value: defaultProps.available,
+                        writable: true,
+                        enumerable : true,
+                        configurable : true
+                    }
+                );
+            }
+            if (! computers[i].hasOwnProperty("user"))
+            {
+                Object.defineProperty(computers[i], "user", {
+                        value: defaultProps.user,
+                        writable: true,
+                        enumerable : true,
+                        configurable : true
+                    }
+                );
 
-
-        computers.forEach()
-
+            }
+            if (! computers[i].hasOwnProperty("os")) 
+            {
+                Object.defineProperty(computers[i], "os", {
+                        value: defaultProps.os,
+                        writable: true,
+                        enumerable : true,
+                        configurable : true
+                    }
+                );
+            }
+        }
 
         console.log(computers);
-
-
-
-        
     })
 })();
-
-
-//In the script, I have an array computers, which makes an inventory of the computers 
-//of a class.
-//Unfortunately, this inventory is incomplete.
-//So I created the object defaultProps, which contains the necessary properties
-//and their default values.
-//When you click on the button, display in the console the contents of the table computers, 
-//with, for each element, all the necessary properties. Attention : if an element already 
-//has a value for a property, do not overwrite it with the default value!
-
-            /*for (let [key, value] of Object.entries(object1)) {
-              console.log(`${key}: ${value}`);
-            }*/
-
-                    /*for(let i = 0; i < computers.length; i++)
-        {
-            for(let j = 0; j < defaultProps.length; j++)
-            {
-                if(! computers[i].hasOwnProperty(j))
-                {
-                    computer[i].j = defaultProps.j;
-                }
-            }
-
-        }*/

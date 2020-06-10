@@ -12,5 +12,24 @@
 (() => {
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
-    // your code here
+    
+    document.getElementById("run").addEventListener("click", () => {
+    	
+    	let newArr = keys.map((element, index) => [keys[index], values[index]]);
+
+    	let newObj = Object.fromEntries(newArr);
+
+    	console.log(Object.keys(newObj));
+    	console.log(Object.values(newObj));
+    });
 })();
+
+// OTHER SOLUTIONS
+
+// Array to object directly
+/*let newObj = {};
+
+for (let i = 0; i < keys.length; i++)
+{
+	newObj[keys[i]] = values[i];
+}*/
