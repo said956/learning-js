@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+    	let laetitia = {
+    		"lastname": "Dolne",
+    		"firstname": "Laëtitia",
+    		"age": 27,
+    		"city": "Liège",
+    		"country": "Belgium"
+    	}
+
+    	console.log(laetitia);
+    })
 })();

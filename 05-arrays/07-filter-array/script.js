@@ -91,6 +91,10 @@
 
     document.getElementById("run").addEventListener("click", () => {
         const result = people.filter((element, index, arr) => arr[index].age > 18);
-        console.log(result);
+        
+        for (let i = 0; i < result.length; i++)
+        {
+            console.log(result[i].firstname + " " + result[i].firstname + " " + result[i].age);
+        }
     })
 })();
