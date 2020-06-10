@@ -29,10 +29,17 @@
     ];
 
     document.getElementById("run").addEventListener("click", () => {
-        let unique = [...new Set(fruits)];
-        console.log(unique);
+        let uniqueFruits = [...new Set(fruits)];
+        console.log(uniqueFruits);
     })
 })();
 
-//let x = (names) => names.filter((v,i) => names.indexOf(v) === i)
-//x(names);
+// OTHER SOLUTIONS
+
+//console.log(Array.from(new Set(fruits)));
+
+
+// OR
+
+//let uniqueFruits = fruits.filter((item,index) => fruits.indexOf(item) === index);
+//console.log(uniqueFruits);
