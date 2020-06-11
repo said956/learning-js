@@ -28,7 +28,7 @@
     };
 
     document.getElementById("run").addEventListener("click", () => {
-        //computers.forEach(() => {
+        //computers.forEach()
 
         for (let i = 0; i < computers.length; i++)
         {
@@ -68,3 +68,29 @@
         console.log(computers);
     })
 })();
+
+/* Fabian's solution
+computers.forEach((element) => {
+    if (element.available === null || element.available === undefined){
+        element.available = defaultProps.available
+    };
+    if (element.user === null || element.avaible === undefined){
+        element.user = defaultProps.user
+    };
+    if (element.os === null || element.os === undefined){
+        element.os = defaultProps.os
+    };
+});
+
+Ahmed's solution
+computers.forEach((computer) => {
+    ajouterDefaultProps(computer, Object.keys(defaultProps));
+  });
+
+  function ajouterDefaultProps(computer, props) {
+    props.forEach((prop) => {
+      if (!computer.hasOwnProperty(prop)) computer[prop] = 
+            defaultProps[prop];
+    });
+  }
+*/
