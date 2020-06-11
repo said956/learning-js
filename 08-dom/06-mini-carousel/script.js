@@ -19,6 +19,16 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    let i = 1;
 
+    document.getElementById("next").addEventListener("click", () => {
+    	const img = document.querySelector(".material figure > img");
+    	img.setAttribute("src", gallery[i++]);
+
+		if (i === gallery.length)
+		{
+			
+			i = 0;
+		}
+    })
 })();

@@ -11,8 +11,15 @@
 
 (function() {
 
-    // your code here
+    const sourceElement = document.getElementById("source");
+    const dataImageValue = sourceElement.getAttribute("data-image");
 
+    const targetElement = document.getElementById("target");
+    const newImg = document.createElement("img");
+    targetElement.appendChild(newImg);
+
+    newImg.setAttribute("src", dataImageValue);
+
+    const materialElement = document.querySelector(".material");
+    materialElement.removeChild(sourceElement);
 })();
-
-//.dataset.img

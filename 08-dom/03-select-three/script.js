@@ -10,7 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
+    const targetElements = document.getElementsByClassName("target");
 
-    // your code here
-
+    for(let i in targetElements)
+    {
+    	targetElements[i].innerHTML = "owned";
+    }
 })();
+
+
+/*
+Why no work?
+
+targetElements.forEach(element => {
+	element.innerHTML = "owned";
+});*/
