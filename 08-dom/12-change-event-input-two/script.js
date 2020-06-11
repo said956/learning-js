@@ -10,7 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
+    const passwordElement = document.getElementById("pass-one");
+    const validityElement = document.getElementById("validity");
+    const regex = /\d[\D]*\d/;
 
-    // your code here
-
+    passwordElement.addEventListener("input", () => {
+    
+    	if(passwordElement.value.length >= 8 && regex.test(passwordElement.value))
+    	{
+    		validityElement.innerHTML = "ok";
+    	}
+    	else
+    	{
+    		validityElement.innerHTML = "not ok";
+    	}
+    });
 })();

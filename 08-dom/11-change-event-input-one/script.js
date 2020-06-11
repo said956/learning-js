@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+    const passwordElement = document.getElementById("pass-one");
+    const counterElement = document.getElementById("counter");
 
+    passwordElement.addEventListener("input", () => {
+
+    	counterElement.innerHTML = passwordElement.value.length + "/10";
+    
+    	if( passwordElement.value.length === 10)
+    	{
+    		passwordElement.disabled = true;
+    	}
+    });
 })();

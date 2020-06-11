@@ -11,6 +11,28 @@
 
 (function() {
 
-    // your code here
+    const targetID = document.getElementById("target");
+    const table = document.createElement("table");
+    const tableBody = document.createElement("tbody");
+
+    for (let i = 0; i < 10; i++)
+    {
+    	const row = document.createElement("tr");
+
+    	for(let j = 0; j < 10; j++)
+    	{
+    		const cell = document.createElement("td");
+    		let multiplication = (i + 1) * (j + 1);
+    		let multiplicationTable = document.createTextNode(multiplication);
+
+    		cell.appendChild(multiplicationTable);
+    		row.appendChild(cell);
+    	}
+
+    	tableBody.appendChild(row);
+    }
+
+    table.appendChild(tableBody);
+    targetID.appendChild(table);
 
 })();
