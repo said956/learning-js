@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+    const targetElement = document.getElementById("target");
+    let textArr = targetElement.innerHTML.split("");
+    targetElement.innerHTML = "";
+    let i = 0;
 
+    function randomDelay(delay) {
+    	return Math.floor((Math.random() * 1000) * delay);
+    }
+	
+	let interval = window.setInterval(() => {
+
+		targetElement.innerHTML += textArr[i];
+		i++;
+
+		if (i === textArr.length)
+		{
+			window.clearInterval(interval);
+		}
+	}, randomDelay(0.2));
 })();
